@@ -27,3 +27,13 @@ class Solution:
                 j += 1
             i += 1
         return j
+
+        # Solution 3
+        gs,ss = sorted(g),sorted(s)
+        c = 0
+        while ss and gs:
+            if ss[-1] >= gs[-1]:
+                ss.pop()
+                c += 1
+            gs.pop()
+        return c
