@@ -17,3 +17,13 @@ class Solution:
                 childi += 1
             cookiei += 1
         return childi
+
+        # Solution 2
+        g.sort(reverse=True)
+        s.sort(reverse=True)
+        i = j = 0
+        while i < len(g) and j < len(s):
+            if g[i] <= s[j]:
+                j += 1
+            i += 1
+        return j
